@@ -5,16 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { ViewemployessComponent } from './viewemployess/viewemployess.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
+const appRoutes:Routes=[
+  {
+    path:"",component:ViewemployessComponent
+  },
+  {
+    path:"add",component:AddemployeeComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    ViewemployessComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
