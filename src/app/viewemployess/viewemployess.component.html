@@ -22,7 +22,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let i of empData">
+                      <tr *ngFor="let i of employeeData">
                         <td>{{i.id}}</td>
                         <td>{{i.empcode}}</td>
                         <td>{{i.name}}</td>
@@ -34,7 +34,7 @@
                         <td>{{i.company}}</td>
                         <td>{{i.doj}}</td>
                      
-                        <td><button class="btn btn-danger" (click)="deleteEmployee(i.id)">Delete</button></td>
+                        <td><button class="btn btn-danger" (click)="deleteemployee(i.id)">Delete</button></td>
                       </tr>
                      
                     </tbody>
